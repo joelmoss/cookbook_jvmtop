@@ -8,7 +8,7 @@ src_filepath = "#{Chef::Config['file_cache_path']}/#{src_filename}"
 extract_path = "/usr/local/jvmtop"
 
 remote_file "#{Chef::Config[:file_cache_path]}/jvmtop-#{node[:jvmtop][:version]}.tar.gz" do
-  source "https://jvmtop.googlecode.com/files/jvmtop-#{node[:jvmtop][:version]}.tar.gz"
+  source "https://github.com/patric-r/jvmtop/releases/download/#{node[:jvmtop][:version]}/jvmtop-#{node[:jvmtop][:version]}.tar.gz"
   owner 'root'
   group 'root'
 end
